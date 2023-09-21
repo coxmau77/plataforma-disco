@@ -1,3 +1,6 @@
+# Agrega un prefijo a tus commits: Nosotros vamos a usar dos por ahora:
+# chore: para hacer referecia a la realización de una nueva tarea.
+# fix: para arreglar bugs.
 # Logs
 logs
 *.log
