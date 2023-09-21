@@ -1,0 +1,22 @@
+{
+  "author": "Mauricio Cox",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "description": "Proyecto integrador final fullstack plataforma5",
+  "keywords": [
+    "node",
+    "javascript",
+    "mongodb",
+    "axios",
+    "mongoose"
+  ],
+  "license": "MIT",
+  "main": "server.js",
+  "name": "plataforma-disco-remote",
+  "scripts": {
+    "start": "node --watch server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.0"
+}
