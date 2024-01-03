@@ -1,0 +1,17 @@
+@import url(./nav.css);
+
+:root {
+    --bg-clr: pink;
+}
+
+
+
+html {
+    background-color: whitesmoke;
+    padding: .2rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}

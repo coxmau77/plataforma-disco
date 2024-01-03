@@ -1,0 +1,24 @@
+/* nav {
+    padding: 1rem 1.4rem;
+    position: fixed;
+    bottom: 1rem;
+
+    display: flex;
+
+    div > button {
+        background-color: aqua;
+    }
+} */
+
+.icon-menu {
+    width: 1.2rem;
+
+    :hover {
+        color: #31C48D;
+    }
+}
+
+.active {
+    color: #31C48D;
+    background-color: #31C48D;
+}
