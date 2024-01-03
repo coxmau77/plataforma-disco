@@ -1,12 +1,24 @@
-const express = require("express");
-const mongoose = require("mongoose");
+const express = require('express');
+// const mongoose = require("mongoose");
+require("mongoose");
 const app = express();
 const userRoute = require("./routes/user.routes.js");
 const PORT = 3000;
 
+// Set EJS para el motor de plantillas
+app.set('view engine', 'ejs');
+
 // midleware
+// Set public static
+app.use(express.static('public'));
+
+// Para que procese la info que enviaremos de un form
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 app.use('/', userRoute);
+
+
 
 // NAME_DB
 // plataformaDisco-db
@@ -17,20 +29,19 @@ app.use('/', userRoute);
 // URL_DB
 // mongodb+srv://coxmau77:<password>@plataformadisco-db.kja0uym.mongodb.net/
 
-const dbPass = 'T3hvyVdS7ZlCDBYx';
-const dbUrl = `mongodb+srv://coxmau77:${dbPass}@plataformadisco-db.kja0uym.mongodb.net/`;
+// const dbPass = 'T3hvyVdS7ZlCDBYx';
+// const dbUrl = `mongodb+srv://coxmau77:${dbPass}@plataformadisco-db.kja0uym.mongodb.net/`;
 
-const connectToMongoDB = async () => {
-  try {
+// const connectToMongoDB = async () => {
+//   try {
+
     
-  } catch (error) {
-    console.error('ERROR -->> ', error);
-  }
-};
-
-
-
+    
+//   } catch (error) {
+//     console.error('ERROR -->> ', error);
+//   }
+// };
 
 app.listen(PORT, () => {
-  console.log("Server ejecutando en http://localhost:" + PORT);
+  console.log(`Server ejecutando en http://localhost:${PORT}`);
 });
