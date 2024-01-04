@@ -18,7 +18,7 @@ app.use(express.json());
 
 app.use('/', userRoute);
 
-
+require('dotenv').config();
 
 // NAME_DB
 // plataformaDisco-db
@@ -29,8 +29,10 @@ app.use('/', userRoute);
 // URL_DB
 // mongodb+srv://coxmau77:<password>@plataformadisco-db.kja0uym.mongodb.net/
 
-// const dbPass = 'T3hvyVdS7ZlCDBYx';
-// const dbUrl = `mongodb+srv://coxmau77:${dbPass}@plataformadisco-db.kja0uym.mongodb.net/`;
+const NAME_DB = process.env.NAME_DB;
+const USER_NAME_DB = process.env.USER_NAME_DB;
+const PASSWORD_DB = process.env.PASSWORD_DB;
+const URL_DB = process.env.URL_DB;
 
 // const connectToMongoDB = async () => {
 //   try {
