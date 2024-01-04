@@ -4,14 +4,13 @@
     --bg-clr: pink;
 }
 
-
-
 html {
     background-color: whitesmoke;
-    padding: .2rem;
+    /* padding: .2rem; */
 }
 
-body {
-    /* display: flex;
-    justify-content: center; */
+main {
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: var(--bg-clr);
 }
