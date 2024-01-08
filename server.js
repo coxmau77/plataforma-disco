@@ -7,10 +7,11 @@ const PORT = 3000;
 
 // Set EJS para el motor de plantillas
 app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
 
-// midleware
+// middleware
 // Set public static
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 // Para que procese la info que enviaremos de un form
 app.use(express.urlencoded({ extended: true }));
