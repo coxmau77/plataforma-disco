@@ -3,6 +3,7 @@ const express = require('express');
 require("mongoose");
 const app = express();
 const userRoute = require("./routes/user.routes.js");
+const albumRoute = require("./routes/album.routes.js");
 const PORT = 3000;
 
 // Set EJS para el motor de plantillas
@@ -18,6 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use('/', userRoute);
+app.use('/', albumRoute);
 
 require('dotenv').config();
 
@@ -38,8 +40,6 @@ const URL_DB = process.env.URL_DB;
 // const connectToMongoDB = async () => {
 //   try {
 
-    
-    
 //   } catch (error) {
 //     console.error('ERROR -->> ', error);
 //   }
